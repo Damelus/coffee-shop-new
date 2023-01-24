@@ -1,0 +1,13 @@
+.footer{
+	display: flex;
+	text-align: center;
+	&__title {
+		font-weight: 400;
+	}
+}
+
+@media (max-width: 375px) {
+	.footer__title {
+		font-size: 14px;
+	}
+}

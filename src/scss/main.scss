@@ -1,0 +1,131 @@
+.main{
+	margin-bottom: 150px;
+	&__inner{
+		display: flex;
+		justify-content: space-between;
+	}
+	&-left{
+		margin-right: 145px;
+		&__descr{
+			font-family: 'Cedarville Cursive', sans-serif;
+			font-size: 28px;
+			line-height: 53px;
+			margin-bottom: 26px;
+			margin-top: 106px;
+		}
+		&__title{
+			font-family: 'Josefin Sans', sans-serif;
+			font-weight: 700;
+			font-size: 63px;
+			line-height: 63px;
+			color: var(--main-black);
+			margin-bottom: 36px;
+		}
+		&__link{
+			@include btn-style;
+		}
+		&-arrow {
+			display: none;
+			@media (max-width: 375px) {
+				display: block;
+			}
+		}
+		@media (max-width: 375px) {
+			margin-right: 0;
+		}
+	}
+	&-right{
+		display: flex;
+		align-items: flex-end;
+		position: relative;
+		&__link{
+			display: flex;
+			justify-content: center;
+			background-color: #F4F7F5;
+			padding: 73px 67px;
+			max-width: 159px;
+			max-height: 157px;
+		}
+		&__box{
+			background-color: var(--secondary-light-gray);
+			width: 410px;
+			height: 466px;
+			z-index: 10;
+			align-items: center;
+		}
+		&__img{
+			width: 344px;
+			height: 373px;
+			margin: 0 auto;
+			position: absolute;
+			right: 36px;
+			top: 140px;
+		}
+	}
+	@media (max-width: 375px) {
+		&-right {
+			display: none;
+		}
+		&__inner {
+			display: flex;
+			flex-direction: column;
+		}
+		&-left {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			&__descr {
+				margin-top: 0;
+				font-size: 19px;
+				margin-bottom: 12px;
+			}
+			&__title {
+				font-size: 54px;
+				margin-bottom: 30px;
+			}
+			&__link {
+				display: flex;
+				align-items: center;
+				padding: 14px 60px;
+				font-size: 16px;
+				&-text {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}
+
+.socials {
+	margin-left: 40px;
+	&-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__item {
+		margin-bottom: 14px;
+	}
+	&__link {
+		display: block;
+		&:hover svg path {
+			fill: #2D635E;
+			transition: fill .3s;
+		}
+	}
+	&__text {
+		transform: rotate(180deg);
+		writing-mode: vertical-lr;
+	}
+	@media (max-width: 375px) {
+		display: none;
+		margin-left: 0;
+		&-list {
+			flex-direction: row;
+		}
+		&__text {
+			display: none;
+		}
+	}
+}

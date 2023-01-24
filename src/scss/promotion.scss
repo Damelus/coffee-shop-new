@@ -1,0 +1,70 @@
+.promotion {
+	margin-bottom: 60px;
+	&-inner {
+		display: flex;
+		gap: 103px;
+	}
+	&-title {
+		@include title-style;
+	}
+	&-text {
+		max-width: 615px;
+		margin-bottom: 25px;
+	}
+	&-link {
+		@include btn-style;
+	}
+	&-right {
+		position: relative;
+		&::before {
+			content: 'Promotion';
+			position: absolute;
+			writing-mode: vertical-lr;
+			transform: rotate(180deg);
+			font-family: 'Cedarville Cursive';
+			font-weight: 400;
+			font-size: 28px;
+			line-height: 28px;
+			color: var(--main-black);
+			right: -6px;
+			top: -25px;
+		}
+		&__bg {
+			width: 410px;
+			height: 276px;
+			background-color: var(--secondary-light-gray);
+		}
+		&__wrapper {
+			display: flex;
+			justify-content: center;
+		}
+		&__img {
+			margin-top: -17px;
+		}
+	}
+	@media (max-width: 375px) {
+		margin-bottom: 150px;
+		&-inner {
+			flex-direction: column-reverse;
+			gap: 60px;
+		}
+		&-left {
+			margin-left: 21px;
+		}
+		&-text {
+			margin-bottom: 0;
+		}
+		&-link {
+			display: none;
+		}
+		&-right {
+			&::before {
+				display: none;
+			}
+		}
+		&-right__bg {
+			height: 287px;
+			width: 375px;
+		}
+	}
+}

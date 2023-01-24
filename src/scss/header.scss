@@ -1,0 +1,148 @@
+.header{
+	margin-top: 50px;
+	@media (max-width: 375px) {
+		margin-top: 30px;
+		margin-bottom: 150px;
+	}
+}
+.nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 50px;
+	@media (max-width: 375px) {
+		justify-content: flex-start;
+	}
+	&-left{
+		display: flex;
+		align-items: center;
+	}
+	&__logo{
+		margin-right: 13px;
+		z-index: 1000;
+		&-title{
+			font-family: 'Cedarville Cursive', sans-serif;
+			font-size: 32px;
+			line-height: 61px;
+		}
+	}
+	&-right{
+		display: flex;
+		align-items: center;
+		@media (max-width: 375px) {
+			flex-direction: column;
+			position: absolute;
+			top: 105px;
+			left: -100%;
+			height: 100vh;
+			width: 100%;
+			// background-color: rgba(255, 255, 255, .8);
+			transition: all 0.2s;
+			z-index: 50000;
+		}
+		&.active {
+			left: 0;
+		}
+	}
+	&-list{
+		display: flex;
+		flex-wrap: wrap;
+		@media (max-width: 375px) {
+			flex-wrap: nowrap;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			padding-top: 30px;
+			gap: 0;
+			height: 100%;
+			width: 100%;
+			background-color: var(--main-white);
+			overflow: auto;
+		}
+	}
+	&-items{
+		padding-left: 26px;
+		&:first-child {
+			padding-left: 0;
+		}
+		&-mobile {
+			display: none;
+		}
+		@media (max-width: 375px) {
+			display: block;
+			padding-left: 0;
+			margin-bottom: 30px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&-link{
+		@include nav-link-style;
+		@media (max-width: 375px) {
+			display: block;
+			font-size: 30px;
+			line-height: 70px;
+			&-mobile:hover svg path {
+				fill: #2D635E;
+				transition: fill .3s;
+			}
+		}
+	}
+	&__burger-icon {
+		// display: none;
+		@media (max-width: 375px) {
+			display: block;
+			width: 30px;
+			height: 18px;
+			position: relative;
+			z-index: 5000;
+			cursor: pointer;
+			margin-right: 40px;
+			span {
+				position: absolute;
+				top: calc(50% - 1px);
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color: var(--primary-green);
+				transition: all 0.2s;
+				&:first-child {
+					top: 0;
+				}
+				&:last-child {
+					top: auto;
+					bottom: 0;
+				}
+			}
+			&.active {
+				span {
+					transform: scale(0);
+					&:first-child {
+						transform: rotate(-45deg);
+						top: calc(50% - 1px);
+					}
+					&:last-child {
+						transform: rotate(45deg);
+						bottom: calc(50% - 1px);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.socials-list-mobile {
+		display: flex;
+		align-items: center;
+		border-bottom: 5px solid rgba(54, 53, 53, 0.8);
+		border-radius: 10px;
+	}
+	.socials__item-mobile {
+		margin-bottom: 0;
+		&:not(:last-child) {
+			margin-right: 27px;
+		}
+	}
+}
