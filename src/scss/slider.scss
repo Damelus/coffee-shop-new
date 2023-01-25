@@ -55,6 +55,11 @@
   @include btn-style2;
 }
 
+.swiper-slide .swiper-slide-duplicate,
+.swiper-slide .swiper-slide-duplicate .swiper-slide-active {
+  display: none;
+}
+
 @media (max-width: 375px) {
   .swiper-slide {
     width: 100%;
