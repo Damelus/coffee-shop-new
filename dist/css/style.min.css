@@ -634,7 +634,7 @@ body.lock {
 }
 
 .swiper {
-  max-width: 1200px;
+  max-width: 1083px;
   max-height: 458px;
 }
 .swiper-wrapper {
@@ -648,13 +648,11 @@ body.lock {
 }
 .swiper-button-left {
   position: absolute;
-  left: 40px;
   padding: 0;
   color: var(--primary-green);
 }
 .swiper-button-right {
   position: absolute;
-  right: 40px;
   padding: 0;
   color: var(--primary-green);
 }
