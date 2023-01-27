@@ -23,6 +23,11 @@
 		}
 		&__link{
 			@include btn-style;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 260px;
+			padding: 14px 65px;
 		}
 		&-arrow {
 			display: none;

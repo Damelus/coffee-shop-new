@@ -11,14 +11,15 @@ const swiper = new Swiper('.swiper', {
   spaceBetween: 30,
   centeredSlides: true,
 	swipe: true,
+	direction: 'horizontal',
   navigation: {
-    nextEl: '.swiper-button-right',
+		nextEl: '.swiper-button-right',
     prevEl: '.swiper-button-left',
   },
 	breakpoints: {
 		375: {
 			slidesPerView: 1,
-			loop: false,
+			loop: true,
 			direction: 'vertical',
 		}
 	}
